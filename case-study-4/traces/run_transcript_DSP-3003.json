@@ -1,0 +1,25 @@
+{
+  "dispute_id": "DSP-3003",
+  "trace": [
+    {
+      "node": "supervisor",
+      "event": "dispute_received",
+      "detail": "dispute_id=DSP-3003 account=ACC-70003"
+    },
+    {
+      "node": "supervisor",
+      "event": "narrative_quarantined",
+      "detail": "no injection patterns detected"
+    },
+    {
+      "node": "dispute_classification",
+      "event": "offline_classification",
+      "detail": "ambiguous_or_out_of_scope (confidence=0.2)"
+    },
+    {
+      "node": "escalate_ambiguous",
+      "event": "ambiguous_or_low_confidence",
+      "detail": "ambiguous_or_out_of_scope"
+    }
+  ]
+}

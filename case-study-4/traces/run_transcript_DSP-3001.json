@@ -1,0 +1,165 @@
+{
+  "dispute_id": "DSP-3001",
+  "trace": [
+    {
+      "node": "supervisor",
+      "event": "dispute_received",
+      "detail": "dispute_id=DSP-3001 account=ACC-70001"
+    },
+    {
+      "node": "supervisor",
+      "event": "narrative_quarantine_flagged",
+      "detail": "2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']"
+    },
+    {
+      "node": "dispute_classification",
+      "event": "offline_classification",
+      "detail": "unauthorized_transaction (confidence=0.75)"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "tool_call",
+      "detail": "network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': True}"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "rag_tool_call",
+      "detail": "- Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction\nSigned fraud affidavit; confirmation the card was in the cardholder's\npossession.\n\n### Clause C2: Duplicate Charge\nBoth transaction records showing matching amount and "
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "transaction_lookup -> {'transaction_id': 'TXN-90001', 'merchant': 'GlobalTech Electronics', 'amount': 2450.0, 'currency': 'USD', 'date': '2026-09-14', 'channel': 'card_not_present', 'account_id': 'ACCT-***001', 'card_pan_masked': '**** **** **** 1234', 'account_opened_date': '2023-02-10', 'high_value': True}"
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "prior_disputes_lookup -> {'account_id': 'ACCT-***001', 'prior_dispute_count': 2, 'prior_disputes': [{'dispute_id': 'DSP-1001', 'date': '2026-05-02', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}, {'dispute_id': 'DSP-1002', 'date': '2026-07-19', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}]}"
+    },
+    {
+      "node": "decision",
+      "event": "offline_decision",
+      "detail": "investigate (confidence=0.99)"
+    },
+    {
+      "node": "supervisor",
+      "event": "dispute_received",
+      "detail": "dispute_id=DSP-3001 account=ACC-70001"
+    },
+    {
+      "node": "supervisor",
+      "event": "narrative_quarantine_flagged",
+      "detail": "2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']"
+    },
+    {
+      "node": "dispute_classification",
+      "event": "offline_classification",
+      "detail": "unauthorized_transaction (confidence=0.75)"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "tool_call",
+      "detail": "network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': True}"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "rag_tool_call",
+      "detail": "- Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction\nSigned fraud affidavit; confirmation the card was in the cardholder's\npossession.\n\n### Clause C2: Duplicate Charge\nBoth transaction records showing matching amount and "
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "transaction_lookup -> {'transaction_id': 'TXN-90001', 'merchant': 'GlobalTech Electronics', 'amount': 2450.0, 'currency': 'USD', 'date': '2026-09-14', 'channel': 'card_not_present', 'account_id': 'ACCT-***001', 'card_pan_masked': '**** **** **** 1234', 'account_opened_date': '2023-02-10', 'high_value': True}"
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "prior_disputes_lookup -> {'account_id': 'ACCT-***001', 'prior_dispute_count': 2, 'prior_disputes': [{'dispute_id': 'DSP-1001', 'date': '2026-05-02', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}, {'dispute_id': 'DSP-1002', 'date': '2026-07-19', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}]}"
+    },
+    {
+      "node": "decision",
+      "event": "offline_decision",
+      "detail": "investigate (confidence=0.99)"
+    },
+    {
+      "node": "supervisor",
+      "event": "dispute_received",
+      "detail": "dispute_id=DSP-3001 account=ACC-70001"
+    },
+    {
+      "node": "supervisor",
+      "event": "narrative_quarantine_flagged",
+      "detail": "2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']"
+    },
+    {
+      "node": "dispute_classification",
+      "event": "offline_classification",
+      "detail": "unauthorized_transaction (confidence=0.75)"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "tool_call",
+      "detail": "network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': True}"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "rag_tool_call",
+      "detail": "- Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction\nSigned fraud affidavit; confirmation the card was in the cardholder's\npossession.\n\n### Clause C2: Duplicate Charge\nBoth transaction records showing matching amount and "
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "transaction_lookup -> {'transaction_id': 'TXN-90001', 'merchant': 'GlobalTech Electronics', 'amount': 2450.0, 'currency': 'USD', 'date': '2026-09-14', 'channel': 'card_not_present', 'account_id': 'ACCT-***001', 'card_pan_masked': '**** **** **** 1234', 'account_opened_date': '2023-02-10', 'high_value': True}"
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "prior_disputes_lookup -> {'account_id': 'ACCT-***001', 'prior_dispute_count': 2, 'prior_disputes': [{'dispute_id': 'DSP-1001', 'date': '2026-05-02', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}, {'dispute_id': 'DSP-1002', 'date': '2026-07-19', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}]}"
+    },
+    {
+      "node": "decision",
+      "event": "offline_decision",
+      "detail": "investigate (confidence=0.99)"
+    },
+    {
+      "node": "supervisor",
+      "event": "dispute_received",
+      "detail": "dispute_id=DSP-3001 account=ACC-70001"
+    },
+    {
+      "node": "supervisor",
+      "event": "narrative_quarantine_flagged",
+      "detail": "2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']"
+    },
+    {
+      "node": "dispute_classification",
+      "event": "offline_classification",
+      "detail": "unauthorized_transaction (confidence=0.75)"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "tool_call",
+      "detail": "network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': True}"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "rag_tool_call",
+      "detail": "- Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction\nSigned fraud affidavit; confirmation the card was in the cardholder's\npossession.\n\n### Clause C2: Duplicate Charge\nBoth transaction records showing matching amount and "
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "transaction_lookup -> {'transaction_id': 'TXN-90001', 'merchant': 'GlobalTech Electronics', 'amount': 2450.0, 'currency': 'USD', 'date': '2026-09-14', 'channel': 'card_not_present', 'account_id': 'ACCT-***001', 'card_pan_masked': '**** **** **** 1234', 'account_opened_date': '2023-02-10', 'high_value': True}"
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "prior_disputes_lookup -> {'account_id': 'ACCT-***001', 'prior_dispute_count': 2, 'prior_disputes': [{'dispute_id': 'DSP-1001', 'date': '2026-05-02', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}, {'dispute_id': 'DSP-1002', 'date': '2026-07-19', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}]}"
+    },
+    {
+      "node": "decision",
+      "event": "offline_decision",
+      "detail": "investigate (confidence=0.99)"
+    }
+  ]
+}

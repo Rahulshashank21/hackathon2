@@ -1,0 +1,8 @@
+=== Tiered memory cross-session persistence test ===
+Customer: ACC-TEST-MEMORY
+
+[session 1 / write] wrote fact key=378ac006-4387-4119-bcec-49517661e553
+[session 2 / recall] query='was there an escalated unauthorized transaction dispute on this account?'
+[session 2 / recall] 2 result(s)
+[session 2 / recall] top result: 'Cross-session verification fact: account ACC-70001 had an unauthorized-transaction dispute escalated to investigate.' (score=0.8424)
+RESULT: PASSED

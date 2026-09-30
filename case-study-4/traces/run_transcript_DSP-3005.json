@@ -1,0 +1,25 @@
+{
+  "dispute_id": "DSP-3005",
+  "trace": [
+    {
+      "node": "supervisor",
+      "event": "dispute_received",
+      "detail": "dispute_id=DSP-3005 account=ACC-70002"
+    },
+    {
+      "node": "supervisor",
+      "event": "narrative_quarantine_flagged",
+      "detail": "1 pattern(s): ['show me (another|a different) (customer|account)']"
+    },
+    {
+      "node": "supervisor",
+      "event": "input_guardrail_blocked",
+      "detail": "['referenced_other_account:ACC-70001', 'cross_account_phrase:show me (another|a different) (customer|account)']"
+    },
+    {
+      "node": "blocked_end",
+      "event": "terminated",
+      "detail": "input guardrail blocked this request"
+    }
+  ]
+}

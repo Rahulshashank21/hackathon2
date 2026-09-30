@@ -1,0 +1,16 @@
+# Secrets
+.env
+
+# Virtual environments
+.venv/
+.venv-phoenix/
+
+# Python
+__pycache__/
+*.py[oc]
+.pytest_cache/
+
+# Generated indices / persisted stores (rebuilt by the CLI / scripts):
+# checkpoints.sqlite (short-term), long_term_memory.sqlite (long-term),
+# rag_chroma/ (policy index) all live under data/memory/.
+data/memory/

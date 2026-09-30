@@ -1,0 +1,125 @@
+{
+  "dispute_id": "DSP-3002",
+  "trace": [
+    {
+      "node": "supervisor",
+      "event": "dispute_received",
+      "detail": "dispute_id=DSP-3002 account=ACC-70002"
+    },
+    {
+      "node": "supervisor",
+      "event": "narrative_quarantined",
+      "detail": "no injection patterns detected"
+    },
+    {
+      "node": "dispute_classification",
+      "event": "offline_classification",
+      "detail": "duplicate_charge (confidence=1.0)"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "tool_call",
+      "detail": "network_rule_check -> {'dispute_type': 'duplicate_charge', 'rule_code': 'VISA-12.6.1', 'rule_name': 'Duplicate Processing', 'filing_deadline_days': 120, 'documentation_required': ['both transaction records', 'cardholder statement'], 'high_value': False}"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "rag_tool_call",
+      "detail": "- Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.536): ### Clause C1: Unauthorized Transaction\nSigned fraud affidavit; confirmation the card was in the cardholder's\npossession.\n\n### Clause C2: Duplicate Charge\nBoth transaction records showing matching amount and "
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "transaction_lookup -> {'transaction_id': 'TXN-90003', 'merchant': 'CityCafe #482', 'amount': 42.5, 'currency': 'USD', 'date': '2026-09-18', 'channel': 'card_present', 'account_id': 'ACCT-***002', 'card_pan_masked': '**** **** **** 5678', 'account_opened_date': '2021-06-01', 'high_value': False}"
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "prior_disputes_lookup -> {'account_id': 'ACCT-***002', 'prior_dispute_count': 0, 'prior_disputes': []}"
+    },
+    {
+      "node": "decision",
+      "event": "offline_decision",
+      "detail": "provisional_credit (confidence=0.99)"
+    },
+    {
+      "node": "supervisor",
+      "event": "dispute_received",
+      "detail": "dispute_id=DSP-3002 account=ACC-70002"
+    },
+    {
+      "node": "supervisor",
+      "event": "narrative_quarantined",
+      "detail": "no injection patterns detected"
+    },
+    {
+      "node": "dispute_classification",
+      "event": "offline_classification",
+      "detail": "duplicate_charge (confidence=1.0)"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "tool_call",
+      "detail": "network_rule_check -> {'dispute_type': 'duplicate_charge', 'rule_code': 'VISA-12.6.1', 'rule_name': 'Duplicate Processing', 'filing_deadline_days': 120, 'documentation_required': ['both transaction records', 'cardholder statement'], 'high_value': False}"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "rag_tool_call",
+      "detail": "- Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.536): ### Clause C1: Unauthorized Transaction\nSigned fraud affidavit; confirmation the card was in the cardholder's\npossession.\n\n### Clause C2: Duplicate Charge\nBoth transaction records showing matching amount and "
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "transaction_lookup -> {'transaction_id': 'TXN-90003', 'merchant': 'CityCafe #482', 'amount': 42.5, 'currency': 'USD', 'date': '2026-09-18', 'channel': 'card_present', 'account_id': 'ACCT-***002', 'card_pan_masked': '**** **** **** 5678', 'account_opened_date': '2021-06-01', 'high_value': False}"
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "prior_disputes_lookup -> {'account_id': 'ACCT-***002', 'prior_dispute_count': 0, 'prior_disputes': []}"
+    },
+    {
+      "node": "decision",
+      "event": "offline_decision",
+      "detail": "provisional_credit (confidence=0.99)"
+    },
+    {
+      "node": "supervisor",
+      "event": "dispute_received",
+      "detail": "dispute_id=DSP-3002 account=ACC-70002"
+    },
+    {
+      "node": "supervisor",
+      "event": "narrative_quarantined",
+      "detail": "no injection patterns detected"
+    },
+    {
+      "node": "dispute_classification",
+      "event": "offline_classification",
+      "detail": "duplicate_charge (confidence=1.0)"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "tool_call",
+      "detail": "network_rule_check -> {'dispute_type': 'duplicate_charge', 'rule_code': 'VISA-12.6.1', 'rule_name': 'Duplicate Processing', 'filing_deadline_days': 120, 'documentation_required': ['both transaction records', 'cardholder statement'], 'high_value': False}"
+    },
+    {
+      "node": "chargeback_rules_retrieval",
+      "event": "rag_tool_call",
+      "detail": "- Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.536): ### Clause C1: Unauthorized Transaction\nSigned fraud affidavit; confirmation the card was in the cardholder's\npossession.\n\n### Clause C2: Duplicate Charge\nBoth transaction records showing matching amount and "
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "transaction_lookup -> {'transaction_id': 'TXN-90003', 'merchant': 'CityCafe #482', 'amount': 42.5, 'currency': 'USD', 'date': '2026-09-18', 'channel': 'card_present', 'account_id': 'ACCT-***002', 'card_pan_masked': '**** **** **** 5678', 'account_opened_date': '2021-06-01', 'high_value': False}"
+    },
+    {
+      "node": "fraud_scoring",
+      "event": "tool_call",
+      "detail": "prior_disputes_lookup -> {'account_id': 'ACCT-***002', 'prior_dispute_count': 0, 'prior_disputes': []}"
+    },
+    {
+      "node": "decision",
+      "event": "offline_decision",
+      "detail": "provisional_credit (confidence=0.99)"
+    }
+  ]
+}

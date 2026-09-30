@@ -1,0 +1,77 @@
+# Configuration for the Transaction Dispute & Fraud-Triage Copilot.
+# All tunable parameters live here (NFR-04 hygiene), not inline in code.
+
+paths:
+  sample_disputes_dir: "data/sample_disputes"
+  checkpoint_db: "data/memory/checkpoints.sqlite"
+  long_term_store_db: "data/memory/long_term_memory.sqlite"
+  policy_corpus_dir: "data/policy_corpus"
+  rag_index_dir: "data/memory/rag_chroma"
+  logs_dir: "logs"
+  traces_dir: "traces"
+  reports_dir: "reports"
+
+embedding:
+  provider: "sentence-transformers"
+  model_name: "BAAI/bge-small-en-v1.5"
+  fallback_model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  dims: 384
+
+generation:
+  # Google's auto-updating "-latest" aliases, not a dated model name —
+  # a dated name (e.g. gemini-2.0-flash) gets fully retired on Google's
+  # own schedule and starts returning HTTP 404.
+  model: "gemini-flash-latest"
+  temperature: 0.0
+  max_retries: 3
+  retry_backoff_seconds: 2
+
+memory:
+  ttl_high_importance_days: 365
+  ttl_medium_importance_days: 30
+  ttl_low_importance_days: 3
+  high_importance_threshold: 0.75
+  medium_importance_threshold: 0.4
+  max_facts_per_investigator: 50
+  sweep_interval_minutes: 60
+
+retrieval:
+  top_k: 3
+
+reflection:
+  max_retries: 1
+  confidence_threshold: 0.6
+
+fraud_scoring:
+  high_value_threshold: 1000.00
+  high_fraud_score_threshold: 0.65
+  classification_confidence_escalation_threshold: 0.5
+
+mcp:
+  server_command: "python"
+  server_args: ["mcp_server/server.py"]
+  server_name: "dispute_tools"
+
+observability:
+  # Generic OTLP/HTTP endpoint for a locally-running Phoenix collector
+  # (started from the separate .venv-phoenix environment). Sending spans
+  # is a no-op (silently dropped, never crashes the agent) if nothing is
+  # listening at this endpoint — see src/observability/tracing.py.
+  otlp_endpoint: "http://localhost:6006/v1/traces"
+  phoenix_base_url: "http://localhost:6006"
+  project_name: "dispute-fraud-triage-copilot"
+
+guardrails:
+  # Regex fragments (case-insensitive) that indicate an attempt to
+  # instruct the assistant rather than describe a dispute, or to reach
+  # another customer's data.
+  injection_patterns:
+    - "ignore (all |any )?(previous|prior|above) instructions"
+    - "system note"
+    - "you (must|should) (now |immediately )?(approve|refund|clear)"
+    - "disregard (the|any) (rules|policy|review)"
+    - "act as (if|a)"
+    - "new instructions?:"
+    - "show me (another|a different) (customer|account)"
+    - "access account (?!acc-)"
+  max_narrative_chars: 4000

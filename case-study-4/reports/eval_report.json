@@ -1,0 +1,41 @@
+{
+  "mode": "PROXY_DEEPEVAL_UNAVAILABLE",
+  "note": "No GOOGLE_API_KEY detected, so these are deterministic proxy approximations (embedding cosine similarity for relevancy, word-overlap for faithfulness), not real DeepEval/Gemini-judge scores. Set GOOGLE_API_KEY and re-run for the real metrics.",
+  "per_case": [
+    {
+      "dispute_id": "DSP-3001",
+      "answer_relevancy": 0.901,
+      "faithfulness": 0.849,
+      "hallucination": 0.151
+    },
+    {
+      "dispute_id": "DSP-3002",
+      "answer_relevancy": 0.79,
+      "faithfulness": 0.738,
+      "hallucination": 0.262
+    },
+    {
+      "dispute_id": "DSP-3003",
+      "answer_relevancy": 0.67,
+      "faithfulness": 0.0,
+      "hallucination": 1.0
+    },
+    {
+      "dispute_id": "DSP-3004",
+      "answer_relevancy": 0.701,
+      "faithfulness": 0.843,
+      "hallucination": 0.157
+    },
+    {
+      "dispute_id": "DSP-3005",
+      "answer_relevancy": 0.794,
+      "faithfulness": 0.0,
+      "hallucination": 1.0
+    }
+  ],
+  "aggregate": {
+    "answer_relevancy_mean": 0.771,
+    "faithfulness_mean": 0.486,
+    "hallucination_rate": 0.514
+  }
+}

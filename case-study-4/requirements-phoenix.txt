@@ -1,0 +1,9 @@
+# Separate, isolated environment used ONLY to run the local Phoenix
+# server/UI and to query spans back out for the golden-signals report
+# and dashboard export. See README "Why two virtual environments".
+#   python -m venv .venv-phoenix && source .venv-phoenix/bin/activate
+#   pip install -r requirements-phoenix.txt
+arize-phoenix==20.16.0
+pandas==3.0.6
+pyarrow==25.0.1
+matplotlib==3.11.2

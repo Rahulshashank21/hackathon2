@@ -1,0 +1,113 @@
+{
+  "source": "Phoenix spans exported to traces/phoenix_spans.parquet",
+  "total_spans": 392,
+  "token_columns_present": [],
+  "latency_by_type": {
+    "thinking_llm": {
+      "llm": {
+        "count": 0,
+        "note": "No LLM spans captured \u2014 GOOGLE_API_KEY was unset for this run, so all reasoning used the offline heuristic path (see src/nodes.py generation_mode='offline_stub'). Re-run with a key to populate this section."
+      }
+    },
+    "acting_graph_nodes": {
+      "LangGraph": {
+        "count": 35,
+        "p50_ms": 2066.68,
+        "p95_ms": 13465.03
+      },
+      "blocked_end": {
+        "count": 7,
+        "p50_ms": 0.45,
+        "p95_ms": 0.46
+      },
+      "chargeback_rules_retrieval": {
+        "count": 21,
+        "p50_ms": 11039.16,
+        "p95_ms": 12166.06
+      },
+      "decision": {
+        "count": 28,
+        "p50_ms": 1.41,
+        "p95_ms": 1.91
+      },
+      "dispute_classification": {
+        "count": 28,
+        "p50_ms": 1.05,
+        "p95_ms": 1.28
+      },
+      "escalate_ambiguous": {
+        "count": 7,
+        "p50_ms": 0.43,
+        "p95_ms": 0.51
+      },
+      "force_escalate": {
+        "count": 7,
+        "p50_ms": 0.5,
+        "p95_ms": 0.63
+      },
+      "fraud_scoring": {
+        "count": 28,
+        "p50_ms": 1194.84,
+        "p95_ms": 1240.93
+      },
+      "reflect": {
+        "count": 7,
+        "p50_ms": 0.35,
+        "p95_ms": 0.38
+      },
+      "route_after_classification": {
+        "count": 28,
+        "p50_ms": 0.32,
+        "p95_ms": 0.41
+      },
+      "route_after_decision": {
+        "count": 28,
+        "p50_ms": 0.4,
+        "p95_ms": 0.66
+      },
+      "route_after_supervisor": {
+        "count": 35,
+        "p50_ms": 0.35,
+        "p95_ms": 0.44
+      },
+      "supervisor": {
+        "count": 35,
+        "p50_ms": 1.82,
+        "p95_ms": 2.07
+      }
+    },
+    "tool_calls": {
+      "chargeback_policy_lookup": {
+        "count": 21,
+        "p50_ms": 10211.73,
+        "p95_ms": 11317.98
+      },
+      "network_rule_check": {
+        "count": 21,
+        "p50_ms": 274.7,
+        "p95_ms": 283.67
+      },
+      "prior_disputes_lookup": {
+        "count": 28,
+        "p50_ms": 280.13,
+        "p95_ms": 343.26
+      },
+      "transaction_lookup": {
+        "count": 28,
+        "p50_ms": 278.31,
+        "p95_ms": 285.18
+      }
+    }
+  },
+  "tokens": {
+    "total_input_tokens": 0,
+    "total_output_tokens": 0
+  },
+  "estimated_cost_usd": 0.0,
+  "eval": {
+    "mode": "PROXY_DEEPEVAL_UNAVAILABLE",
+    "accuracy": 0.771,
+    "hallucination_rate": 0.514,
+    "faithfulness": 0.486
+  }
+}

@@ -1,0 +1,1277 @@
+2026-09-27 14:34:29,826 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3001 account=ACC-***001
+2026-09-27 14:34:29,826 INFO copilot.supervisor: narrative_quarantine_flagged: 2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']
+2026-09-27 14:34:29,828 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-27 14:34:30,647 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': True}
+2026-09-27 14:34:34,319 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-27 14:34:34,714 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:34,715 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-09-27 14:34:34,733 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:35,021 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:35,064 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:35,066 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-27 14:34:35,328 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:35,343 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:35,603 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:35,634 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2FREADME.md=&etag=%228b8567d75ffa619486d9590cb0eb76d66ad46c49%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:35,872 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:35,941 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:36,205 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:36,249 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fsentence_bert_config.json=&etag=%22ea85692bff64b0d1917833c31ddbca8ab10f5455%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:36,514 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:36,762 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:36,775 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:37,171 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:37,478 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:37,785 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:38,069 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:38,297 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:38,314 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:38,604 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:38,641 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:38,875 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:38,910 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:39,167 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:39,179 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:39,423 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:39,692 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-27 14:34:39,964 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:39,978 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2F1_Pooling%2Fconfig.json=&etag=%221da070f0993788c8851a652170ff013aa54dd519%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:40,242 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:40,498 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-09-27 14:34:40,923 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-27 14:34:42,124 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90001', 'merchant': 'GlobalTech Electronics', 'amount': 2450.0, 'currency': 'USD', 'date': '2026-09-14', 'channel': 'card_not_present', 'account_id': 'ACCT-***001', 'card_pan_masked': '**** **** **** 1234', 'account_opened_date': '2023-02-10', 'high_value': True}
+2026-09-27 14:34:42,124 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***001', 'prior_dispute_count': 2, 'prior_disputes': [{'dispute_id': 'DSP-1001', 'date': '2026-05-02', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}, {'dispute_id': 'DSP-1002', 'date': '2026-07-19', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}]}
+2026-09-27 14:34:42,125 INFO copilot.decision: offline_decision: investigate (confidence=0.99)
+2026-09-27 14:34:43,442 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3002 account=ACC-***002
+2026-09-27 14:34:43,442 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-27 14:34:43,443 INFO copilot.dispute_classification: offline_classification: duplicate_charge (confidence=1.0)
+2026-09-27 14:34:44,269 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'duplicate_charge', 'rule_code': 'VISA-12.6.1', 'rule_name': 'Duplicate Processing', 'filing_deadline_days': 120, 'documentation_required': ['both transaction records', 'cardholder statement'], 'high_value': False}
+2026-09-27 14:34:47,958 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-27 14:34:48,278 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:48,279 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-09-27 14:34:48,294 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:48,537 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:48,640 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:48,641 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-27 14:34:48,886 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:48,909 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:49,151 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:49,165 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2FREADME.md=&etag=%228b8567d75ffa619486d9590cb0eb76d66ad46c49%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:49,416 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:49,458 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:49,696 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:49,724 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fsentence_bert_config.json=&etag=%22ea85692bff64b0d1917833c31ddbca8ab10f5455%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:49,960 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:50,337 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:50,376 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:50,790 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:51,096 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:51,333 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:51,567 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:51,813 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:51,828 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:52,074 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:52,121 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:52,381 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:52,398 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:52,633 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:52,735 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:53,000 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:53,246 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-27 14:34:53,521 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:34:53,537 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2F1_Pooling%2Fconfig.json=&etag=%221da070f0993788c8851a652170ff013aa54dd519%22 "HTTP/1.1 200 OK"
+2026-09-27 14:34:53,829 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:34:54,080 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-09-27 14:34:54,501 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.536): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-27 14:34:55,697 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90003', 'merchant': 'CityCafe #482', 'amount': 42.5, 'currency': 'USD', 'date': '2026-09-18', 'channel': 'card_present', 'account_id': 'ACCT-***002', 'card_pan_masked': '**** **** **** 5678', 'account_opened_date': '2021-06-01', 'high_value': False}
+2026-09-27 14:34:55,697 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***002', 'prior_dispute_count': 0, 'prior_disputes': []}
+2026-09-27 14:34:55,699 INFO copilot.decision: offline_decision: provisional_credit (confidence=0.99)
+2026-09-27 14:34:56,973 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3003 account=ACC-***003
+2026-09-27 14:34:56,973 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-27 14:34:56,975 INFO copilot.dispute_classification: offline_classification: ambiguous_or_out_of_scope (confidence=0.2)
+2026-09-27 14:34:56,977 INFO copilot.escalate_ambiguous: ambiguous_or_low_confidence: ambiguous_or_out_of_scope
+2026-09-27 14:35:00,362 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-27 14:35:00,706 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:00,708 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-09-27 14:35:00,724 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:00,956 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:00,971 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:00,972 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-27 14:35:01,234 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:01,247 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:01,491 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:01,541 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2FREADME.md=&etag=%228b8567d75ffa619486d9590cb0eb76d66ad46c49%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:01,789 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:01,827 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:02,067 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:02,084 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fsentence_bert_config.json=&etag=%22ea85692bff64b0d1917833c31ddbca8ab10f5455%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:02,361 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:02,624 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:02,672 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:03,004 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:03,268 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:03,501 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:03,765 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:04,000 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:04,014 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:04,283 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:04,306 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:04,562 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:04,612 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:04,848 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:04,863 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:05,108 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:05,342 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-27 14:35:05,611 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:05,637 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2F1_Pooling%2Fconfig.json=&etag=%221da070f0993788c8851a652170ff013aa54dd519%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:05,906 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:06,151 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-09-27 14:35:07,647 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3004 account=ACC-***004
+2026-09-27 14:35:07,647 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-27 14:35:07,649 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-27 14:35:08,478 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': False}
+2026-09-27 14:35:12,179 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-27 14:35:12,512 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:12,534 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:12,806 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:12,875 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:12,877 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-27 14:35:13,112 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:13,113 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-09-27 14:35:13,124 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:13,353 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:13,392 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2FREADME.md=&etag=%228b8567d75ffa619486d9590cb0eb76d66ad46c49%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:13,634 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:13,670 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:13,901 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:13,916 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fsentence_bert_config.json=&etag=%22ea85692bff64b0d1917833c31ddbca8ab10f5455%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:14,227 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:14,462 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:14,491 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:14,854 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:15,178 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:15,446 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:15,685 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:15,946 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:15,961 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:16,197 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:16,249 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:16,492 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:16,559 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:16,795 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:16,813 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:17,085 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:17,434 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-27 14:35:17,736 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:17,770 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2F1_Pooling%2Fconfig.json=&etag=%221da070f0993788c8851a652170ff013aa54dd519%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:18,029 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:18,349 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-09-27 14:35:18,733 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-27 14:35:19,930 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90005', 'merchant': 'QuickMart Online', 'amount': 180.0, 'currency': 'USD', 'date': '2026-09-21', 'channel': 'card_not_present', 'account_id': 'ACCT-***004', 'card_pan_masked': '**** **** **** 3456', 'account_opened_date': '2020-01-15', 'high_value': False}
+2026-09-27 14:35:19,930 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***004', 'prior_dispute_count': 1, 'prior_disputes': [{'dispute_id': 'DSP-1010', 'date': '2025-11-11', 'type': 'unauthorized_transaction', 'outcome': 'provisional_credit_finalized'}]}
+2026-09-27 14:35:19,932 INFO copilot.decision: offline_decision: chargeback (confidence=0.47)
+2026-09-27 14:35:19,934 INFO copilot.reflect: low_confidence_retry: decision confidence 0.47 below threshold; retry #1
+2026-09-27 14:35:21,061 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90005', 'merchant': 'QuickMart Online', 'amount': 180.0, 'currency': 'USD', 'date': '2026-09-21', 'channel': 'card_not_present', 'account_id': 'ACCT-***004', 'card_pan_masked': '**** **** **** 3456', 'account_opened_date': '2020-01-15', 'high_value': False}
+2026-09-27 14:35:21,061 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***004', 'prior_dispute_count': 1, 'prior_disputes': [{'dispute_id': 'DSP-1010', 'date': '2025-11-11', 'type': 'unauthorized_transaction', 'outcome': 'provisional_credit_finalized'}]}
+2026-09-27 14:35:21,063 INFO copilot.decision: offline_decision: chargeback (confidence=0.55)
+2026-09-27 14:35:21,065 INFO copilot.force_escalate: reflection_exhausted: max retries reached at confidence 0.55; forcing investigate+escalate
+2026-09-27 14:35:22,358 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3005 account=ACC-***002
+2026-09-27 14:35:22,358 INFO copilot.supervisor: narrative_quarantine_flagged: 1 pattern(s): ['show me (another|a different) (customer|account)']
+2026-09-27 14:35:22,358 INFO copilot.supervisor: input_guardrail_blocked: ['referenced_other_account:ACC-***001', 'cross_account_phrase:show me (another|a different) (customer|account)']
+2026-09-27 14:35:22,360 INFO copilot.blocked_end: terminated: input guardrail blocked this request
+2026-09-27 14:35:25,970 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-27 14:35:26,308 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:26,309 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-09-27 14:35:26,326 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:26,578 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:26,618 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:26,621 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-27 14:35:26,848 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:26,868 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:27,143 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:27,170 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2FREADME.md=&etag=%228b8567d75ffa619486d9590cb0eb76d66ad46c49%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:27,407 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:27,426 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:27,666 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:27,688 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fsentence_bert_config.json=&etag=%22ea85692bff64b0d1917833c31ddbca8ab10f5455%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:27,927 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:28,163 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:28,177 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:28,588 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:28,883 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:29,128 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:29,395 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:29,723 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:29,764 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:30,009 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:30,033 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:30,311 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:30,328 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:30,623 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:30,636 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:30,912 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:31,150 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-27 14:35:31,442 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:35:31,471 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2F1_Pooling%2Fconfig.json=&etag=%221da070f0993788c8851a652170ff013aa54dd519%22 "HTTP/1.1 200 OK"
+2026-09-27 14:35:31,722 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:35:31,955 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-09-27 14:36:21,267 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3001 account=ACC-***001
+2026-09-27 14:36:21,267 INFO copilot.supervisor: narrative_quarantine_flagged: 2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']
+2026-09-27 14:36:21,269 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-27 14:36:22,092 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': True}
+2026-09-27 14:36:25,689 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-27 14:36:26,124 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:36:26,126 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-09-27 14:36:26,227 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-27 14:36:26,481 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:36:26,516 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-09-27 14:36:26,518 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-27 14:36:26,752 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:36:26,769 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-09-27 14:36:27,046 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:36:27,148 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2FREADME.md=&etag=%228b8567d75ffa619486d9590cb0eb76d66ad46c49%22 "HTTP/1.1 200 OK"
+2026-09-27 14:36:27,416 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:36:27,428 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-27 14:36:27,660 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:36:27,677 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fsentence_bert_config.json=&etag=%22ea85692bff64b0d1917833c31ddbca8ab10f5455%22 "HTTP/1.1 200 OK"
+2026-09-27 14:36:27,947 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:36:28,179 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:36:28,193 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:36:28,531 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:36:28,781 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:36:29,013 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:36:29,311 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:36:29,551 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:36:29,605 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-09-27 14:36:29,856 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:36:29,913 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:36:30,154 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:36:30,181 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-09-27 14:36:30,427 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:36:30,440 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-09-27 14:36:30,746 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-09-27 14:36:30,984 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-27 14:36:31,259 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-27 14:36:31,272 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2Fmain%2F1_Pooling%2Fconfig.json=&etag=%221da070f0993788c8851a652170ff013aa54dd519%22 "HTTP/1.1 200 OK"
+2026-09-27 14:36:31,519 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-09-27 14:36:31,770 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-09-27 14:36:32,247 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-27 14:36:33,457 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90001', 'merchant': 'GlobalTech Electronics', 'amount': 2450.0, 'currency': 'USD', 'date': '2026-09-14', 'channel': 'card_not_present', 'account_id': 'ACCT-***001', 'card_pan_masked': '**** **** **** 1234', 'account_opened_date': '2023-02-10', 'high_value': True}
+2026-09-27 14:36:33,457 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***001', 'prior_dispute_count': 2, 'prior_disputes': [{'dispute_id': 'DSP-1001', 'date': '2026-05-02', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}, {'dispute_id': 'DSP-1002', 'date': '2026-07-19', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}]}
+2026-09-27 14:36:33,458 INFO copilot.decision: offline_decision: investigate (confidence=0.99)
+2026-09-27 14:36:33,536 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3002 account=ACC-***002
+2026-09-27 14:36:33,536 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-27 14:36:33,538 INFO copilot.dispute_classification: offline_classification: duplicate_charge (confidence=1.0)
+2026-09-27 14:36:34,384 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'duplicate_charge', 'rule_code': 'VISA-12.6.1', 'rule_name': 'Duplicate Processing', 'filing_deadline_days': 120, 'documentation_required': ['both transaction records', 'cardholder statement'], 'high_value': False}
+2026-09-27 14:36:34,397 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.536): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-27 14:36:35,507 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90003', 'merchant': 'CityCafe #482', 'amount': 42.5, 'currency': 'USD', 'date': '2026-09-18', 'channel': 'card_present', 'account_id': 'ACCT-***002', 'card_pan_masked': '**** **** **** 5678', 'account_opened_date': '2021-06-01', 'high_value': False}
+2026-09-27 14:36:35,507 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***002', 'prior_dispute_count': 0, 'prior_disputes': []}
+2026-09-27 14:36:35,509 INFO copilot.decision: offline_decision: provisional_credit (confidence=0.99)
+2026-09-27 14:36:35,574 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3003 account=ACC-***003
+2026-09-27 14:36:35,574 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-27 14:36:35,576 INFO copilot.dispute_classification: offline_classification: ambiguous_or_out_of_scope (confidence=0.2)
+2026-09-27 14:36:35,578 INFO copilot.escalate_ambiguous: ambiguous_or_low_confidence: ambiguous_or_out_of_scope
+2026-09-27 14:36:35,620 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3004 account=ACC-***004
+2026-09-27 14:36:35,620 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-27 14:36:35,622 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-27 14:36:36,461 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': False}
+2026-09-27 14:36:36,474 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-27 14:36:37,594 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90005', 'merchant': 'QuickMart Online', 'amount': 180.0, 'currency': 'USD', 'date': '2026-09-21', 'channel': 'card_not_present', 'account_id': 'ACCT-***004', 'card_pan_masked': '**** **** **** 3456', 'account_opened_date': '2020-01-15', 'high_value': False}
+2026-09-27 14:36:37,594 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***004', 'prior_dispute_count': 1, 'prior_disputes': [{'dispute_id': 'DSP-1010', 'date': '2025-11-11', 'type': 'unauthorized_transaction', 'outcome': 'provisional_credit_finalized'}]}
+2026-09-27 14:36:37,596 INFO copilot.decision: offline_decision: chargeback (confidence=0.47)
+2026-09-27 14:36:37,598 INFO copilot.reflect: low_confidence_retry: decision confidence 0.47 below threshold; retry #1
+2026-09-27 14:36:38,724 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90005', 'merchant': 'QuickMart Online', 'amount': 180.0, 'currency': 'USD', 'date': '2026-09-21', 'channel': 'card_not_present', 'account_id': 'ACCT-***004', 'card_pan_masked': '**** **** **** 3456', 'account_opened_date': '2020-01-15', 'high_value': False}
+2026-09-27 14:36:38,725 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***004', 'prior_dispute_count': 1, 'prior_disputes': [{'dispute_id': 'DSP-1010', 'date': '2025-11-11', 'type': 'unauthorized_transaction', 'outcome': 'provisional_credit_finalized'}]}
+2026-09-27 14:36:38,726 INFO copilot.decision: offline_decision: chargeback (confidence=0.55)
+2026-09-27 14:36:38,728 INFO copilot.force_escalate: reflection_exhausted: max retries reached at confidence 0.55; forcing investigate+escalate
+2026-09-27 14:36:38,793 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3005 account=ACC-***002
+2026-09-27 14:36:38,793 INFO copilot.supervisor: narrative_quarantine_flagged: 1 pattern(s): ['show me (another|a different) (customer|account)']
+2026-09-27 14:36:38,793 INFO copilot.supervisor: input_guardrail_blocked: ['referenced_other_account:ACC-***001', 'cross_account_phrase:show me (another|a different) (customer|account)']
+2026-09-27 14:36:38,795 INFO copilot.blocked_end: terminated: input guardrail blocked this request
+2026-09-29 16:00:51,201 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3001 account=ACC-***001
+2026-09-29 16:00:51,202 INFO copilot.supervisor: narrative_quarantine_flagged: 2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']
+2026-09-29 16:00:51,701 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 0.81s.
+2026-09-29 16:00:52,517 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:01:22,730 INFO copilot.dispute_classification: gemini_run: unauthorized_transaction
+2026-09-29 16:01:22,766 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 1.06s.
+2026-09-29 16:01:23,829 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:03:48,953 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 0.87s.
+2026-09-29 16:03:49,855 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:03:50,361 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 0.99s.
+2026-09-29 16:03:51,356 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:04:27,470 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:04:27,978 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-29 16:04:27,979 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-09-29 16:04:28,071 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-09-29 16:04:28,470 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-29 16:04:28,511 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-09-29 16:04:28,512 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:04:28,785 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-29 16:04:28,830 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-09-29 16:04:29,099 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-29 16:04:29,147 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md "HTTP/1.1 200 OK"
+2026-09-29 16:04:29,417 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-29 16:04:29,474 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-09-29 16:04:29,763 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-29 16:04:29,808 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-09-29 16:04:30,062 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-09-29 16:04:30,416 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-29 16:04:30,468 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-09-29 16:04:31,133 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-09-29 16:04:31,541 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-29 16:04:31,849 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-29 16:04:32,160 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-29 16:04:32,566 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-29 16:04:32,611 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-09-29 16:04:32,861 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-29 16:04:32,894 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-09-29 16:04:33,160 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-29 16:04:33,202 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-09-29 16:04:33,588 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-29 16:04:33,631 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-09-29 16:04:33,905 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-09-29 16:04:34,316 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-29 16:04:34,715 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-29 16:04:34,797 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-09-29 16:04:35,228 INFO httpx: HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-09-29 16:04:35,516 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-09-29 16:04:38,681 INFO copilot.rag_tool: Built dispute-policy RAG index: 10 documents.
+2026-09-29 16:04:40,214 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 1.03s.
+2026-09-29 16:04:41,255 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:04:41,764 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 0.83s.
+2026-09-29 16:04:42,596 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:04:43,608 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 1.10s.
+2026-09-29 16:04:44,714 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:04:47,732 INFO copilot.chargeback_rules_retrieval: gemini_failed_fallback: Invalid argument provided to Gemini: 400 Function call is missing a thought_signature in functionCall parts. This is required for tools to work correctly, and missing thought_signature may lead to degraded model performance. Additional data, function call `default_api:network_rule_check` , position 2. Please refer to https://ai.google.dev/gemini-api/docs/thought-signatures for more details.
+2026-09-29 16:04:47,758 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 0.85s.
+2026-09-29 16:04:48,362 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': True}
+2026-09-29 16:04:48,491 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:04:48,614 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:04:49,121 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 0.81s.
+2026-09-29 16:04:49,939 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:08:16,547 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 1.04s.
+2026-09-29 16:08:17,597 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:08:18,109 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 0.96s.
+2026-09-29 16:08:19,074 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:08:20,586 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 0.99s.
+2026-09-29 16:08:21,584 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:08:24,913 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 2 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 35.071563049s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 35
+}
+].
+2026-09-29 16:08:27,274 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 4 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 32.82177723s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 32
+}
+].
+2026-09-29 16:08:31,719 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 8 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 28.431313665s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 28
+}
+].
+2026-09-29 16:08:41,603 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 16 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 18.482504918s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 18
+}
+].
+2026-09-29 16:08:58,171 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 32 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 1.877569913s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 1
+}
+].
+2026-09-29 16:09:30,531 INFO copilot.fraud_scoring: gemini_failed_fallback: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 29.542829081s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.de
+2026-09-29 16:09:31,031 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 0.83s.
+2026-09-29 16:09:31,709 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90001', 'merchant': 'GlobalTech Electronics', 'amount': 2450.0, 'currency': 'USD', 'date': '2026-09-14', 'channel': 'card_not_present', 'account_id': 'ACCT-***001', 'card_pan_masked': '**** **** **** 1234', 'account_opened_date': '2023-02-10', 'high_value': True}
+2026-09-29 16:09:31,709 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***001', 'prior_dispute_count': 2, 'prior_disputes': [{'dispute_id': 'DSP-1001', 'date': '2026-05-02', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}, {'dispute_id': 'DSP-1002', 'date': '2026-07-19', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}]}
+2026-09-29 16:09:31,870 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:09:32,381 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 1.12s.
+2026-09-29 16:09:32,541 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 2 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 27.530910361s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 27
+}
+].
+2026-09-29 16:09:33,505 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:11:00,601 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 4 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 59.71797929s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 59
+}
+].
+2026-09-29 16:11:05,085 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 8 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 55.004548283s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 55
+}
+].
+2026-09-29 16:11:13,813 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 16 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 46.572276583s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 46
+}
+].
+2026-09-29 16:11:30,298 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 32 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 29.841034029s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 29
+}
+].
+2026-09-29 16:12:03,071 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 1.06s.
+2026-09-29 16:12:04,138 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:12:05,301 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 2 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 54.819011494s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 54
+}
+].
+2026-09-29 16:12:07,878 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 4 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 52.361286159s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 52
+}
+].
+2026-09-29 16:12:12,345 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 8 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 47.785987173s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 47
+}
+].
+2026-09-29 16:12:20,811 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 16 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 39.326964208s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 39
+}
+].
+2026-09-29 16:12:37,371 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 32 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 22.834704747s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 22
+}
+].
+2026-09-29 16:13:10,125 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 1.19s.
+2026-09-29 16:13:11,321 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:13:14,537 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 2 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 45.713168129s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 45
+}
+].
+2026-09-29 16:13:17,011 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 4 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 43.120396499s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 43
+}
+].
+2026-09-29 16:13:21,609 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 8 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 38.630161088s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 38
+}
+].
+2026-09-29 16:13:30,223 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 16 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 30.056416785s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 30
+}
+].
+2026-09-29 16:13:46,794 WARNING langchain_google_genai.chat_models: Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 32 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 13.474218581s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.8-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 13
+}
+].
+2026-09-29 16:14:19,312 INFO copilot.decision: gemini_failed_fallback: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash
+Please retry in 40.884419193s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.de
+2026-09-29 16:14:19,312 INFO copilot.decision: offline_decision: investigate (confidence=0.99)
+2026-09-29 16:14:20,130 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 61] Connection refused")) encountered while exporting spans batch, retrying in 0.82s.
+2026-09-29 16:14:20,970 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:26:57,955 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3001 account=ACC-***001
+2026-09-29 16:26:57,956 INFO copilot.supervisor: narrative_quarantine_flagged: 2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']
+2026-09-29 16:26:58,442 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.84s.
+2026-09-29 16:26:59,290 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:27:31,229 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3001 account=ACC-***001
+2026-09-29 16:27:31,229 INFO copilot.supervisor: narrative_quarantine_flagged: 2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']
+2026-09-29 16:27:31,232 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-29 16:27:31,718 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.04s.
+2026-09-29 16:27:32,264 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': True}
+2026-09-29 16:27:32,770 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:27:33,281 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.99s.
+2026-09-29 16:27:34,277 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:27:37,030 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:27:37,045 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:27:39,912 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:27:39,918 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.86s.
+2026-09-29 16:27:40,787 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:27:41,289 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.87s.
+2026-09-29 16:27:41,732 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90001', 'merchant': 'GlobalTech Electronics', 'amount': 2450.0, 'currency': 'USD', 'date': '2026-09-14', 'channel': 'card_not_present', 'account_id': 'ACCT-***001', 'card_pan_masked': '**** **** **** 1234', 'account_opened_date': '2023-02-10', 'high_value': True}
+2026-09-29 16:27:41,732 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***001', 'prior_dispute_count': 2, 'prior_disputes': [{'dispute_id': 'DSP-1001', 'date': '2026-05-02', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}, {'dispute_id': 'DSP-1002', 'date': '2026-07-19', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}]}
+2026-09-29 16:27:41,734 INFO copilot.decision: offline_decision: investigate (confidence=0.99)
+2026-09-29 16:27:42,156 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:27:42,157 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.89s.
+2026-09-29 16:27:43,057 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:27:53,374 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3002 account=ACC-***002
+2026-09-29 16:27:53,374 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-29 16:27:53,376 INFO copilot.dispute_classification: offline_classification: duplicate_charge (confidence=1.0)
+2026-09-29 16:27:53,861 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.04s.
+2026-09-29 16:27:54,398 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'duplicate_charge', 'rule_code': 'VISA-12.6.1', 'rule_name': 'Duplicate Processing', 'filing_deadline_days': 120, 'documentation_required': ['both transaction records', 'cardholder statement'], 'high_value': False}
+2026-09-29 16:27:54,904 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:27:55,411 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.13s.
+2026-09-29 16:27:56,542 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:27:59,088 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:27:59,104 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:28:02,075 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.536): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:28:02,094 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.89s.
+2026-09-29 16:28:02,987 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:28:03,492 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.12s.
+2026-09-29 16:28:03,781 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90003', 'merchant': 'CityCafe #482', 'amount': 42.5, 'currency': 'USD', 'date': '2026-09-18', 'channel': 'card_present', 'account_id': 'ACCT-***002', 'card_pan_masked': '**** **** **** 5678', 'account_opened_date': '2021-06-01', 'high_value': False}
+2026-09-29 16:28:03,782 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***002', 'prior_dispute_count': 0, 'prior_disputes': []}
+2026-09-29 16:28:03,784 INFO copilot.decision: offline_decision: provisional_credit (confidence=0.99)
+2026-09-29 16:28:04,615 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:28:04,618 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.99s.
+2026-09-29 16:28:05,618 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:28:11,645 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3003 account=ACC-***003
+2026-09-29 16:28:11,645 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-29 16:28:11,648 INFO copilot.dispute_classification: offline_classification: ambiguous_or_out_of_scope (confidence=0.2)
+2026-09-29 16:28:11,650 INFO copilot.escalate_ambiguous: ambiguous_or_low_confidence: ambiguous_or_out_of_scope
+2026-09-29 16:28:12,127 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.05s.
+2026-09-29 16:28:13,185 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:28:16,043 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:28:16,060 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:28:23,137 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3004 account=ACC-***004
+2026-09-29 16:28:23,137 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-29 16:28:23,139 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-29 16:28:23,627 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.09s.
+2026-09-29 16:28:24,177 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': False}
+2026-09-29 16:28:24,722 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:28:25,228 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.82s.
+2026-09-29 16:28:26,049 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:28:28,611 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:28:28,627 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:28:31,375 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:28:31,616 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.17s.
+2026-09-29 16:28:32,795 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:28:32,990 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90005', 'merchant': 'QuickMart Online', 'amount': 180.0, 'currency': 'USD', 'date': '2026-09-21', 'channel': 'card_not_present', 'account_id': 'ACCT-***004', 'card_pan_masked': '**** **** **** 3456', 'account_opened_date': '2020-01-15', 'high_value': False}
+2026-09-29 16:28:32,990 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***004', 'prior_dispute_count': 1, 'prior_disputes': [{'dispute_id': 'DSP-1010', 'date': '2025-11-11', 'type': 'unauthorized_transaction', 'outcome': 'provisional_credit_finalized'}]}
+2026-09-29 16:28:32,992 INFO copilot.decision: offline_decision: chargeback (confidence=0.47)
+2026-09-29 16:28:32,996 INFO copilot.reflect: low_confidence_retry: decision confidence 0.47 below threshold; retry #1
+2026-09-29 16:28:33,299 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.99s.
+2026-09-29 16:28:34,291 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:28:34,421 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90005', 'merchant': 'QuickMart Online', 'amount': 180.0, 'currency': 'USD', 'date': '2026-09-21', 'channel': 'card_not_present', 'account_id': 'ACCT-***004', 'card_pan_masked': '**** **** **** 3456', 'account_opened_date': '2020-01-15', 'high_value': False}
+2026-09-29 16:28:34,421 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***004', 'prior_dispute_count': 1, 'prior_disputes': [{'dispute_id': 'DSP-1010', 'date': '2025-11-11', 'type': 'unauthorized_transaction', 'outcome': 'provisional_credit_finalized'}]}
+2026-09-29 16:28:34,423 INFO copilot.decision: offline_decision: chargeback (confidence=0.55)
+2026-09-29 16:28:34,425 INFO copilot.force_escalate: reflection_exhausted: max retries reached at confidence 0.55; forcing investigate+escalate
+2026-09-29 16:28:34,798 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.03s.
+2026-09-29 16:28:35,839 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:28:45,269 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3005 account=ACC-***002
+2026-09-29 16:28:45,270 INFO copilot.supervisor: narrative_quarantine_flagged: 1 pattern(s): ['show me (another|a different) (customer|account)']
+2026-09-29 16:28:45,271 INFO copilot.supervisor: input_guardrail_blocked: ['referenced_other_account:ACC-***001', 'cross_account_phrase:show me (another|a different) (customer|account)']
+2026-09-29 16:28:45,273 INFO copilot.blocked_end: terminated: input guardrail blocked this request
+2026-09-29 16:28:45,752 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.19s.
+2026-09-29 16:28:46,947 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:28:49,615 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:28:49,632 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:29:20,628 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3001 account=ACC-***001
+2026-09-29 16:29:20,628 INFO copilot.supervisor: narrative_quarantine_flagged: 2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']
+2026-09-29 16:29:20,632 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-29 16:29:21,114 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.96s.
+2026-09-29 16:29:21,699 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': True}
+2026-09-29 16:29:22,082 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:29:22,593 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.06s.
+2026-09-29 16:29:23,656 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:29:26,755 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:29:26,770 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:29:30,246 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:29:30,321 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.88s.
+2026-09-29 16:29:31,205 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:29:32,211 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.88s.
+2026-09-29 16:29:32,303 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90001', 'merchant': 'GlobalTech Electronics', 'amount': 2450.0, 'currency': 'USD', 'date': '2026-09-14', 'channel': 'card_not_present', 'account_id': 'ACCT-***001', 'card_pan_masked': '**** **** **** 1234', 'account_opened_date': '2023-02-10', 'high_value': True}
+2026-09-29 16:29:32,303 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***001', 'prior_dispute_count': 2, 'prior_disputes': [{'dispute_id': 'DSP-1001', 'date': '2026-05-02', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}, {'dispute_id': 'DSP-1002', 'date': '2026-07-19', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}]}
+2026-09-29 16:29:32,306 INFO copilot.decision: offline_decision: investigate (confidence=0.99)
+2026-09-29 16:29:32,781 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3002 account=ACC-***002
+2026-09-29 16:29:32,781 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-29 16:29:32,784 INFO copilot.dispute_classification: offline_classification: duplicate_charge (confidence=1.0)
+2026-09-29 16:29:33,098 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:29:33,606 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.99s.
+2026-09-29 16:29:33,879 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'duplicate_charge', 'rule_code': 'VISA-12.6.1', 'rule_name': 'Duplicate Processing', 'filing_deadline_days': 120, 'documentation_required': ['both transaction records', 'cardholder statement'], 'high_value': False}
+2026-09-29 16:29:33,940 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.536): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:29:34,601 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:29:35,108 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.04s.
+2026-09-29 16:29:35,506 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90003', 'merchant': 'CityCafe #482', 'amount': 42.5, 'currency': 'USD', 'date': '2026-09-18', 'channel': 'card_present', 'account_id': 'ACCT-***002', 'card_pan_masked': '**** **** **** 5678', 'account_opened_date': '2021-06-01', 'high_value': False}
+2026-09-29 16:29:35,506 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***002', 'prior_dispute_count': 0, 'prior_disputes': []}
+2026-09-29 16:29:35,508 INFO copilot.decision: offline_decision: provisional_credit (confidence=0.99)
+2026-09-29 16:29:35,818 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3003 account=ACC-***003
+2026-09-29 16:29:35,818 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-29 16:29:35,820 INFO copilot.dispute_classification: offline_classification: ambiguous_or_out_of_scope (confidence=0.2)
+2026-09-29 16:29:35,822 INFO copilot.escalate_ambiguous: ambiguous_or_low_confidence: ambiguous_or_out_of_scope
+2026-09-29 16:29:35,872 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3004 account=ACC-***004
+2026-09-29 16:29:35,873 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-29 16:29:35,874 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-29 16:29:36,156 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:29:36,661 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.96s.
+2026-09-29 16:29:37,024 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': False}
+2026-09-29 16:29:37,070 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:29:37,625 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:29:38,130 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.85s.
+2026-09-29 16:29:38,503 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90005', 'merchant': 'QuickMart Online', 'amount': 180.0, 'currency': 'USD', 'date': '2026-09-21', 'channel': 'card_not_present', 'account_id': 'ACCT-***004', 'card_pan_masked': '**** **** **** 3456', 'account_opened_date': '2020-01-15', 'high_value': False}
+2026-09-29 16:29:38,503 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***004', 'prior_dispute_count': 1, 'prior_disputes': [{'dispute_id': 'DSP-1010', 'date': '2025-11-11', 'type': 'unauthorized_transaction', 'outcome': 'provisional_credit_finalized'}]}
+2026-09-29 16:29:38,505 INFO copilot.decision: offline_decision: chargeback (confidence=0.47)
+2026-09-29 16:29:38,507 INFO copilot.reflect: low_confidence_retry: decision confidence 0.47 below threshold; retry #1
+2026-09-29 16:29:38,986 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:29:39,492 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.18s.
+2026-09-29 16:29:40,061 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90005', 'merchant': 'QuickMart Online', 'amount': 180.0, 'currency': 'USD', 'date': '2026-09-21', 'channel': 'card_not_present', 'account_id': 'ACCT-***004', 'card_pan_masked': '**** **** **** 3456', 'account_opened_date': '2020-01-15', 'high_value': False}
+2026-09-29 16:29:40,061 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***004', 'prior_dispute_count': 1, 'prior_disputes': [{'dispute_id': 'DSP-1010', 'date': '2025-11-11', 'type': 'unauthorized_transaction', 'outcome': 'provisional_credit_finalized'}]}
+2026-09-29 16:29:40,063 INFO copilot.decision: offline_decision: chargeback (confidence=0.55)
+2026-09-29 16:29:40,066 INFO copilot.force_escalate: reflection_exhausted: max retries reached at confidence 0.55; forcing investigate+escalate
+2026-09-29 16:29:40,298 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3005 account=ACC-***002
+2026-09-29 16:29:40,298 INFO copilot.supervisor: narrative_quarantine_flagged: 1 pattern(s): ['show me (another|a different) (customer|account)']
+2026-09-29 16:29:40,298 INFO copilot.supervisor: input_guardrail_blocked: ['referenced_other_account:ACC-***001', 'cross_account_phrase:show me (another|a different) (customer|account)']
+2026-09-29 16:29:40,300 INFO copilot.blocked_end: terminated: input guardrail blocked this request
+2026-09-29 16:29:40,682 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:29:41,000 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.84s.
+2026-09-29 16:29:41,852 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:30:14,272 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3001 account=ACC-***001
+2026-09-29 16:30:14,273 INFO copilot.supervisor: narrative_quarantine_flagged: 2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']
+2026-09-29 16:30:14,275 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-29 16:30:14,759 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.08s.
+2026-09-29 16:30:15,372 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': True}
+2026-09-29 16:30:15,844 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:30:16,351 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.19s.
+2026-09-29 16:30:17,549 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:30:19,886 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:30:19,901 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:30:23,034 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:30:23,110 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.96s.
+2026-09-29 16:30:24,074 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:30:24,581 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.84s.
+2026-09-29 16:30:24,695 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90001', 'merchant': 'GlobalTech Electronics', 'amount': 2450.0, 'currency': 'USD', 'date': '2026-09-14', 'channel': 'card_not_present', 'account_id': 'ACCT-***001', 'card_pan_masked': '**** **** **** 1234', 'account_opened_date': '2023-02-10', 'high_value': True}
+2026-09-29 16:30:24,695 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***001', 'prior_dispute_count': 2, 'prior_disputes': [{'dispute_id': 'DSP-1001', 'date': '2026-05-02', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}, {'dispute_id': 'DSP-1002', 'date': '2026-07-19', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}]}
+2026-09-29 16:30:24,698 INFO copilot.decision: offline_decision: investigate (confidence=0.99)
+2026-09-29 16:30:25,426 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:30:25,431 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.01s.
+2026-09-29 16:30:26,454 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:30:28,223 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3002 account=ACC-***002
+2026-09-29 16:30:28,224 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-29 16:30:28,226 INFO copilot.dispute_classification: offline_classification: duplicate_charge (confidence=1.0)
+2026-09-29 16:30:28,712 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.99s.
+2026-09-29 16:30:29,232 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'duplicate_charge', 'rule_code': 'VISA-12.6.1', 'rule_name': 'Duplicate Processing', 'filing_deadline_days': 120, 'documentation_required': ['both transaction records', 'cardholder statement'], 'high_value': False}
+2026-09-29 16:30:29,714 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:30:30,220 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.17s.
+2026-09-29 16:30:31,390 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:30:33,937 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:30:33,976 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:30:37,080 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.536): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:30:37,474 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.10s.
+2026-09-29 16:30:38,580 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:30:38,583 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90003', 'merchant': 'CityCafe #482', 'amount': 42.5, 'currency': 'USD', 'date': '2026-09-18', 'channel': 'card_present', 'account_id': 'ACCT-***002', 'card_pan_masked': '**** **** **** 5678', 'account_opened_date': '2021-06-01', 'high_value': False}
+2026-09-29 16:30:38,584 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***002', 'prior_dispute_count': 0, 'prior_disputes': []}
+2026-09-29 16:30:38,586 INFO copilot.decision: offline_decision: provisional_credit (confidence=0.99)
+2026-09-29 16:30:38,962 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.06s.
+2026-09-29 16:30:40,030 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:30:41,881 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3003 account=ACC-***003
+2026-09-29 16:30:41,881 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-29 16:30:41,884 INFO copilot.dispute_classification: offline_classification: ambiguous_or_out_of_scope (confidence=0.2)
+2026-09-29 16:30:41,885 INFO copilot.escalate_ambiguous: ambiguous_or_low_confidence: ambiguous_or_out_of_scope
+2026-09-29 16:30:42,370 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.82s.
+2026-09-29 16:30:43,200 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:30:46,335 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:30:46,354 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:30:50,476 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3004 account=ACC-***004
+2026-09-29 16:30:50,477 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-29 16:30:50,479 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-29 16:30:50,971 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.05s.
+2026-09-29 16:30:51,521 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': False}
+2026-09-29 16:30:52,033 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:30:52,544 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.05s.
+2026-09-29 16:30:53,599 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:30:56,331 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:30:56,349 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:30:59,430 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:30:59,782 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.14s.
+2026-09-29 16:31:00,934 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:31:01,287 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90005', 'merchant': 'QuickMart Online', 'amount': 180.0, 'currency': 'USD', 'date': '2026-09-21', 'channel': 'card_not_present', 'account_id': 'ACCT-***004', 'card_pan_masked': '**** **** **** 3456', 'account_opened_date': '2020-01-15', 'high_value': False}
+2026-09-29 16:31:01,287 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***004', 'prior_dispute_count': 1, 'prior_disputes': [{'dispute_id': 'DSP-1010', 'date': '2025-11-11', 'type': 'unauthorized_transaction', 'outcome': 'provisional_credit_finalized'}]}
+2026-09-29 16:31:01,289 INFO copilot.decision: offline_decision: chargeback (confidence=0.47)
+2026-09-29 16:31:01,291 INFO copilot.reflect: low_confidence_retry: decision confidence 0.47 below threshold; retry #1
+2026-09-29 16:31:01,438 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.91s.
+2026-09-29 16:31:02,362 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:31:02,672 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90005', 'merchant': 'QuickMart Online', 'amount': 180.0, 'currency': 'USD', 'date': '2026-09-21', 'channel': 'card_not_present', 'account_id': 'ACCT-***004', 'card_pan_masked': '**** **** **** 3456', 'account_opened_date': '2020-01-15', 'high_value': False}
+2026-09-29 16:31:02,672 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***004', 'prior_dispute_count': 1, 'prior_disputes': [{'dispute_id': 'DSP-1010', 'date': '2025-11-11', 'type': 'unauthorized_transaction', 'outcome': 'provisional_credit_finalized'}]}
+2026-09-29 16:31:02,674 INFO copilot.decision: offline_decision: chargeback (confidence=0.55)
+2026-09-29 16:31:02,676 INFO copilot.force_escalate: reflection_exhausted: max retries reached at confidence 0.55; forcing investigate+escalate
+2026-09-29 16:31:02,873 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.97s.
+2026-09-29 16:31:03,849 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:31:05,596 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3005 account=ACC-***002
+2026-09-29 16:31:05,596 INFO copilot.supervisor: narrative_quarantine_flagged: 1 pattern(s): ['show me (another|a different) (customer|account)']
+2026-09-29 16:31:05,596 INFO copilot.supervisor: input_guardrail_blocked: ['referenced_other_account:ACC-***001', 'cross_account_phrase:show me (another|a different) (customer|account)']
+2026-09-29 16:31:05,600 INFO copilot.blocked_end: terminated: input guardrail blocked this request
+2026-09-29 16:31:06,085 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.96s.
+2026-09-29 16:31:07,170 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:31:10,082 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:31:10,101 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:31:13,601 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3001 account=ACC-***001
+2026-09-29 16:31:13,601 INFO copilot.supervisor: narrative_quarantine_flagged: 2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']
+2026-09-29 16:31:13,603 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-29 16:31:14,087 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.08s.
+2026-09-29 16:31:14,635 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': True}
+2026-09-29 16:31:15,178 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:31:15,700 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.93s.
+2026-09-29 16:31:16,637 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:31:19,173 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:31:19,187 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:31:22,004 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:31:22,204 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.96s.
+2026-09-29 16:31:23,167 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:31:23,674 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 0.95s.
+2026-09-29 16:31:23,760 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90001', 'merchant': 'GlobalTech Electronics', 'amount': 2450.0, 'currency': 'USD', 'date': '2026-09-14', 'channel': 'card_not_present', 'account_id': 'ACCT-***001', 'card_pan_masked': '**** **** **** 1234', 'account_opened_date': '2023-02-10', 'high_value': True}
+2026-09-29 16:31:23,760 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***001', 'prior_dispute_count': 2, 'prior_disputes': [{'dispute_id': 'DSP-1001', 'date': '2026-05-02', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}, {'dispute_id': 'DSP-1002', 'date': '2026-07-19', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}]}
+2026-09-29 16:31:23,763 INFO copilot.decision: offline_decision: investigate (confidence=0.99)
+2026-09-29 16:31:24,144 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3002 account=ACC-***002
+2026-09-29 16:31:24,144 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-29 16:31:24,146 INFO copilot.dispute_classification: offline_classification: duplicate_charge (confidence=1.0)
+2026-09-29 16:31:24,634 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:31:25,142 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.00s.
+2026-09-29 16:31:25,191 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'duplicate_charge', 'rule_code': 'VISA-12.6.1', 'rule_name': 'Duplicate Processing', 'filing_deadline_days': 120, 'documentation_required': ['both transaction records', 'cardholder statement'], 'high_value': False}
+2026-09-29 16:31:25,209 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.536): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:31:26,152 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:31:26,587 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90003', 'merchant': 'CityCafe #482', 'amount': 42.5, 'currency': 'USD', 'date': '2026-09-18', 'channel': 'card_present', 'account_id': 'ACCT-***002', 'card_pan_masked': '**** **** **** 5678', 'account_opened_date': '2021-06-01', 'high_value': False}
+2026-09-29 16:31:26,587 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***002', 'prior_dispute_count': 0, 'prior_disputes': []}
+2026-09-29 16:31:26,589 INFO copilot.decision: offline_decision: provisional_credit (confidence=0.99)
+2026-09-29 16:31:26,657 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.01s.
+2026-09-29 16:31:26,857 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3003 account=ACC-***003
+2026-09-29 16:31:26,857 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-29 16:31:26,859 INFO copilot.dispute_classification: offline_classification: ambiguous_or_out_of_scope (confidence=0.2)
+2026-09-29 16:31:26,861 INFO copilot.escalate_ambiguous: ambiguous_or_low_confidence: ambiguous_or_out_of_scope
+2026-09-29 16:31:26,903 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3004 account=ACC-***004
+2026-09-29 16:31:26,903 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-29 16:31:26,905 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-29 16:31:27,673 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:31:27,932 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': False}
+2026-09-29 16:31:27,952 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:31:28,187 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.03s.
+2026-09-29 16:31:29,231 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:31:29,388 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90005', 'merchant': 'QuickMart Online', 'amount': 180.0, 'currency': 'USD', 'date': '2026-09-21', 'channel': 'card_not_present', 'account_id': 'ACCT-***004', 'card_pan_masked': '**** **** **** 3456', 'account_opened_date': '2020-01-15', 'high_value': False}
+2026-09-29 16:31:29,388 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***004', 'prior_dispute_count': 1, 'prior_disputes': [{'dispute_id': 'DSP-1010', 'date': '2025-11-11', 'type': 'unauthorized_transaction', 'outcome': 'provisional_credit_finalized'}]}
+2026-09-29 16:31:29,390 INFO copilot.decision: offline_decision: chargeback (confidence=0.47)
+2026-09-29 16:31:29,392 INFO copilot.reflect: low_confidence_retry: decision confidence 0.47 below threshold; retry #1
+2026-09-29 16:31:29,742 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.05s.
+2026-09-29 16:31:30,807 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:31:30,919 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90005', 'merchant': 'QuickMart Online', 'amount': 180.0, 'currency': 'USD', 'date': '2026-09-21', 'channel': 'card_not_present', 'account_id': 'ACCT-***004', 'card_pan_masked': '**** **** **** 3456', 'account_opened_date': '2020-01-15', 'high_value': False}
+2026-09-29 16:31:30,919 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***004', 'prior_dispute_count': 1, 'prior_disputes': [{'dispute_id': 'DSP-1010', 'date': '2025-11-11', 'type': 'unauthorized_transaction', 'outcome': 'provisional_credit_finalized'}]}
+2026-09-29 16:31:30,921 INFO copilot.decision: offline_decision: chargeback (confidence=0.55)
+2026-09-29 16:31:30,923 INFO copilot.force_escalate: reflection_exhausted: max retries reached at confidence 0.55; forcing investigate+escalate
+2026-09-29 16:31:31,202 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3005 account=ACC-***002
+2026-09-29 16:31:31,202 INFO copilot.supervisor: narrative_quarantine_flagged: 1 pattern(s): ['show me (another|a different) (customer|account)']
+2026-09-29 16:31:31,202 INFO copilot.supervisor: input_guardrail_blocked: ['referenced_other_account:ACC-***001', 'cross_account_phrase:show me (another|a different) (customer|account)']
+2026-09-29 16:31:31,204 INFO copilot.blocked_end: terminated: input guardrail blocked this request
+2026-09-29 16:31:31,318 WARNING opentelemetry.exporter.otlp.proto.http.trace_exporter: Transient error HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /v1/traces (Caused by NewConnectionError("HTTPConnection(host='localhost', port=6006): Failed to establish a new connection: [Errno 1] Operation not permitted")) encountered while exporting spans batch, retrying in 1.11s.
+2026-09-29 16:31:32,433 ERROR opentelemetry.exporter.otlp.proto.http.trace_exporter: Failed to export spans batch due to timeout, max retries or shutdown.
+2026-09-29 16:34:14,397 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3001 account=ACC-***001
+2026-09-29 16:34:14,397 INFO copilot.supervisor: narrative_quarantine_flagged: 2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']
+2026-09-29 16:34:14,400 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-29 16:34:15,440 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': True}
+2026-09-29 16:34:20,514 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:34:20,531 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:34:23,668 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:34:25,472 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90001', 'merchant': 'GlobalTech Electronics', 'amount': 2450.0, 'currency': 'USD', 'date': '2026-09-14', 'channel': 'card_not_present', 'account_id': 'ACCT-***001', 'card_pan_masked': '**** **** **** 1234', 'account_opened_date': '2023-02-10', 'high_value': True}
+2026-09-29 16:34:25,472 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***001', 'prior_dispute_count': 2, 'prior_disputes': [{'dispute_id': 'DSP-1001', 'date': '2026-05-02', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}, {'dispute_id': 'DSP-1002', 'date': '2026-07-19', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}]}
+2026-09-29 16:34:25,474 INFO copilot.decision: offline_decision: investigate (confidence=0.99)
+2026-09-29 16:35:35,880 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3001 account=ACC-***001
+2026-09-29 16:35:35,880 INFO copilot.supervisor: narrative_quarantine_flagged: 2 pattern(s): ['ignore (all |any )?(previous|prior|above) instructions', 'system note']
+2026-09-29 16:35:35,883 INFO copilot.dispute_classification: offline_classification: unauthorized_transaction (confidence=0.75)
+2026-09-29 16:35:36,921 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'unauthorized_transaction', 'rule_code': 'VISA-10.4', 'rule_name': 'Other Fraud - Card-Absent Environment', 'filing_deadline_days': 120, 'documentation_required': ['cardholder fraud affidavit', 'transaction detail'], 'high_value': True}
+2026-09-29 16:35:41,589 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:35:41,609 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:35:44,636 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.599): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:35:46,459 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90001', 'merchant': 'GlobalTech Electronics', 'amount': 2450.0, 'currency': 'USD', 'date': '2026-09-14', 'channel': 'card_not_present', 'account_id': 'ACCT-***001', 'card_pan_masked': '**** **** **** 1234', 'account_opened_date': '2023-02-10', 'high_value': True}
+2026-09-29 16:35:46,459 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***001', 'prior_dispute_count': 2, 'prior_disputes': [{'dispute_id': 'DSP-1001', 'date': '2026-05-02', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}, {'dispute_id': 'DSP-1002', 'date': '2026-07-19', 'type': 'unauthorized_transaction', 'outcome': 'chargeback_approved'}]}
+2026-09-29 16:35:46,461 INFO copilot.decision: offline_decision: investigate (confidence=0.99)
+2026-09-29 16:36:04,451 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3002 account=ACC-***002
+2026-09-29 16:36:04,451 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-29 16:36:04,453 INFO copilot.dispute_classification: offline_classification: duplicate_charge (confidence=1.0)
+2026-09-29 16:36:05,480 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'duplicate_charge', 'rule_code': 'VISA-12.6.1', 'rule_name': 'Duplicate Processing', 'filing_deadline_days': 120, 'documentation_required': ['both transaction records', 'cardholder statement'], 'high_value': False}
+2026-09-29 16:36:10,307 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-29 16:36:10,325 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-29 16:36:13,510 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.536): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-29 16:36:15,146 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90003', 'merchant': 'CityCafe #482', 'amount': 42.5, 'currency': 'USD', 'date': '2026-09-18', 'channel': 'card_present', 'account_id': 'ACCT-***002', 'card_pan_masked': '**** **** **** 5678', 'account_opened_date': '2021-06-01', 'high_value': False}
+2026-09-29 16:36:15,146 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***002', 'prior_dispute_count': 0, 'prior_disputes': []}
+2026-09-29 16:36:15,148 INFO copilot.decision: offline_decision: provisional_credit (confidence=0.99)
+2026-09-30 11:16:34,350 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3002 account=ACC-***002
+2026-09-30 11:16:34,351 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-30 11:18:49,685 INFO copilot.supervisor: dispute_received: dispute_id=DSP-3002 account=ACC-***002
+2026-09-30 11:18:49,685 INFO copilot.supervisor: narrative_quarantined: no injection patterns detected
+2026-09-30 11:18:49,687 INFO copilot.dispute_classification: offline_classification: duplicate_charge (confidence=1.0)
+2026-09-30 11:18:50,731 INFO copilot.chargeback_rules_retrieval: tool_call: network_rule_check -> {'dispute_type': 'duplicate_charge', 'rule_code': 'VISA-12.6.1', 'rule_name': 'Duplicate Processing', 'filing_deadline_days': 120, 'documentation_required': ['both transaction records', 'cardholder statement'], 'high_value': False}
+2026-09-30 11:18:56,690 INFO sentence_transformers.base.model: No device provided, using mps
+2026-09-30 11:18:56,711 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-09-30 11:19:00,196 INFO copilot.chargeback_rules_retrieval: rag_tool_call: - Documentation Requirements by Dispute Type (doc_id=POLICY-DOCUMENTATION, distance=0.536): ### Clause C1: Unauthorized Transaction
+Signed fraud affidavit; confirmation the card was in the cardholder's
+possession.
+
+### Clause C2: Duplicate Charge
+Both transaction records showing matching amount and 
+2026-09-30 11:19:01,849 INFO copilot.fraud_scoring: tool_call: transaction_lookup -> {'transaction_id': 'TXN-90003', 'merchant': 'CityCafe #482', 'amount': 42.5, 'currency': 'USD', 'date': '2026-09-18', 'channel': 'card_present', 'account_id': 'ACCT-***002', 'card_pan_masked': '**** **** **** 5678', 'account_opened_date': '2021-06-01', 'high_value': False}
+2026-09-30 11:19:01,849 INFO copilot.fraud_scoring: tool_call: prior_disputes_lookup -> {'account_id': 'ACCT-***002', 'prior_dispute_count': 0, 'prior_disputes': []}
+2026-09-30 11:19:01,851 INFO copilot.decision: offline_decision: provisional_credit (confidence=0.99)

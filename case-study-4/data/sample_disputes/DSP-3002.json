@@ -1,0 +1,8 @@
+{
+  "dispute_id": "DSP-3002",
+  "account_id": "ACC-70002",
+  "transaction_id": "TXN-90003",
+  "amount": 42.50,
+  "filed_date": "2026-09-19",
+  "narrative": "I was charged twice for the same coffee at CityCafe #482 on the same day, same amount. I only ordered once. Can you refund the duplicate charge?"
+}

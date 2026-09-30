@@ -1,0 +1,94 @@
+# Main application environment — the LangGraph copilot, MCP client/server,
+# RAG, memory, guardrails, and agent evaluation.
+#
+# Install with:
+#   python -m venv .venv
+#   source .venv/bin/activate
+#   python -m pip install -r requirements.txt
+#
+# NOTE on the two-venv setup (see README "Why two virtual environments"):
+# arize-phoenix's full package transitively requires mcp>=2.0 (via
+# pydantic-ai -> fastmcp), while our own MCP server/client stack needs
+# mcp<2 (the stable FastMCP v1 API + a compatible langchain-mcp-adapters
+# release). These cannot coexist in one environment. This venv sends
+# real OpenTelemetry/OpenInference spans over the wire (no `phoenix`
+# package import needed for that) to a Phoenix server run from the
+# separate environment in requirements-phoenix.txt.
+
+
+# ============================================================
+# LangGraph
+# ============================================================
+
+langgraph==1.0.1
+langgraph-checkpoint==3.0.1
+langgraph-checkpoint-sqlite==3.0.3
+langgraph-prebuilt==1.0.1
+
+
+# ============================================================
+# LangChain
+# ============================================================
+
+langchain
+langchain-core>=1.1.3,<2.0.0
+
+langchain-chroma==1.1.0
+langchain-google-genai==2.1.12
+
+# 0.3.1 is incompatible with LangChain Core 1.x.
+# Let pip select a newer compatible release.
+langchain-huggingface>=1.0.0
+
+langchain-mcp-adapters==0.3.2
+
+
+# ============================================================
+# MCP
+# ============================================================
+
+mcp==1.30.0
+
+
+# ============================================================
+# RAG / embeddings / vector database
+# ============================================================
+
+sentence-transformers==6.1.0
+chromadb==1.5.9
+
+
+# ============================================================
+# Core dependencies
+# ============================================================
+
+pydantic==2.13.5
+PyYAML==6.0.3
+numpy==2.5.3
+tenacity==9.1.4
+python-dotenv==1.2.3
+
+
+# ============================================================
+# Observability
+# ============================================================
+
+# Generic OpenTelemetry/OpenInference instrumentation.
+# No Phoenix package is installed in this environment.
+# Spans are sent over OTLP/HTTP to the separately-run Phoenix server.
+
+opentelemetry-sdk==1.45.0
+opentelemetry-exporter-otlp==1.45.0
+opentelemetry-exporter-otlp-proto-http==1.45.0
+
+openinference-instrumentation-langchain==0.1.76
+openinference-semantic-conventions==0.1.39
+
+
+# ============================================================
+# Agent evaluation
+# ============================================================
+
+deepeval==4.2.6
+pytest==9.1.1
+pytest-asyncio==1.4.0
